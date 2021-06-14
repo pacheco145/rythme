@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100;300;400;600;700;800&display=swap');
+
+//font-weights
+$light: 100;
+$regular: 300;
+$semi: 600;
+$bold: 700;
+$extra: 800;
+
+// font-sizes
+$s-font: 16px;
+$sm-font: 24px;
+$m-font: 32px;
+$l-font: 40px;
+
+body {
+    font-family: 'Overpass', sans-serif;
+}
+
+::-moz-placeholder, ::placeholder {
+    font-family: 'Overpass', sans-serif;
+}
+
+// Function for converting a px based font-size to rem.
+@function calculateRem($size) {
+    @return $size / 16px * 1rem;
+   }
+   
+// // Mixin that will include the fall back px declaration as well as the calculated rem value.
+// @mixin fontSize($size2) {
+//     font-size: $size2;
+//     font-size: calculateRem($size2);
+// }
+
+// @include fontSize(12px);
+
+@mixin font ($weight, $size, $color) {
+    font-weight: $weight;
+    // font-size: $size;
+    color: $color;
+    font-size: calculateRem($size);
+}
+
+//con escribir dentro de cualquier elemento de css @include font() y meter dentro valores separados por comas
+// Ejemplo: 
+// 
+    //  .nombreClase {
+    //       @include font($regular, 12px, var(--primary-color));
+    //   }

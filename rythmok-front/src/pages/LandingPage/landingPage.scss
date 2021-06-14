@@ -1,0 +1,16 @@
+.landing {
+    animation: example 3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  @keyframes example {
+    0% {opacity: 1; visibility: visible;}
+    75% {opacity: 1; visibility: visible;}
+    100% {opacity: 0; visibility: hidden;}
+  }
+
+//   @keyframes displayType {
+//     from {display: block;}
+//     to {display: none;}
+//   }

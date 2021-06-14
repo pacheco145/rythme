@@ -1,0 +1,25 @@
+@import './styles/reset.css';
+@import './styles/global-settings.scss';
+@import './styles/styles.scss';
+
+
+body {
+    background-color: var(--primary-color);
+    color: white;
+    @include font($regular, $l-font, white)
+}
+
+// header, nav {
+//     position: fixed;
+//     width: 100%;
+//     height: $headNavHeight;
+//     color: black;
+// }
+
+.header-space, .nav-space {
+    height: $headNavHeight;
+}
+
+.margin-page {
+    margin: 20px;
+}

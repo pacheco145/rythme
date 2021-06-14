@@ -1,0 +1,83 @@
+@import '../../styles/styles.scss';
+
+.background {
+    background: var(--gradient-2);
+    // min-height: 823px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    z-index: 5;
+    align-items: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-top: 10px;
+    margin: 0 auto;
+
+    &__button {
+        align-self: center;
+        margin-top: 16px;
+        width: 90px;
+        background: var(--button-color-1);
+        height: 34px;
+        border-radius: 23px;
+        color: white;
+        font-size: 15px;
+    }
+
+    &__text {
+        color: white;
+        padding-top: 16px;
+        @include font($bold, 16px, white);
+        text-align: left;
+    }
+
+    &__input {
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        height: 30px;
+        padding-left: 8px;
+    }
+}
+
+.logo {
+    width: 160px;
+    margin-bottom: 40px;
+}
+
+.title {
+    color: var(--text-color-2);
+}
+
+.link {
+    color: white;
+    margin-top: 10px;
+    font-size: 15px;
+    text-decoration: revert;
+}
+
+.form-container-register {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 237px;
+    margin-top: 10px;
+}
+
+.landing {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    &__logo {
+        margin-bottom: 0;
+    }
+}

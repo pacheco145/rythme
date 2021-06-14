@@ -1,0 +1,41 @@
+@import '../../styles/styles.scss';
+
+.info-card{
+    display: flex;
+    background-color: var(--secondary-color);
+    color: black;
+    border-radius: 0 24px 24px 0;
+    // margin: 20px;
+    
+    &__image{
+        height: 160px;
+        width: 160px;
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    &__info{
+        margin: 14px;
+        display: flex; 
+        flex-direction: column;
+        @include font($semi, 14px, black);
+        line-height: 16px;
+    }
+    
+    &__artist {
+        flex-grow: 3;
+        margin-top: 8px;
+        @include font($semi, 21px, black);
+    }
+
+    &__date {
+        flex-grow: 1;
+        margin-top: 5px;
+        @include font($semi, 16px, black);
+    }
+
+
+
+
+}
+

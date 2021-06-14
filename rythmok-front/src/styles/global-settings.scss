@@ -1,0 +1,22 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color)
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a, span {
+    margin: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+
+}

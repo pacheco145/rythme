@@ -1,0 +1,66 @@
+@import '../../styles/styles.scss';
+
+.detail-container {
+    margin: 20px;
+    font-size: 16px;
+}
+
+.detail-buttons {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    
+    &__fav {
+        img {
+            width: 30px;
+        }
+    }
+    &__buy {
+        width: 80px;
+        height: 25px;
+        border-radius: 15px;
+        border: var(--secondary-color) 1px solid;
+        color: var(--secondary-color);
+    }
+}
+
+.detail-info {
+    display: flex;
+    flex-direction: column;
+    margin: 12px 0;
+
+    & > * {
+        margin-bottom: 8px;
+
+        // &:nth-child(-n + 3)::before {
+        //     content: 'O';
+        //     margin-right: 4px;
+        // }
+    }
+
+    
+
+    &__hall {
+        text-transform: uppercase;
+        // &::before {
+        //     content: url('../../assets/img/my-concerts.svg')!important;
+        // }
+    }
+
+    &__attendees {
+        // text-indent: 10px;
+        // &::before {
+        //     content: ''!important;
+        // }
+    }
+}
+
+.detail-description {
+    @include font ($light, 14px, white);
+    line-height: 16px;
+    padding-right: 5px;
+}
+
+.map {
+    height: 180px;
+}

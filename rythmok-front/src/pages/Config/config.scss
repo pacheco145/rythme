@@ -1,0 +1,64 @@
+@import '../../styles/styles.scss';
+
+.config {
+
+    &__block {
+        margin: 48px 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        overflow-x: hidden ;
+    }
+
+    h3 {
+        text-transform: uppercase;
+        @include font($semi, 16px, var(--button-color-3));
+        margin-bottom: 8px;
+    }
+
+    &__two-buttons {
+        display: flex;
+    }
+
+    &__button {
+        // display: flex;
+        background-color: var(--button-color-3);
+        text-align: left;
+        padding: 12px;
+        margin: 5px 0;
+        border-radius: 8px;
+        @include font($bold, 16px, var(--primary-color));
+        width: 100%;
+        position: relative;
+        transition: 0.3s ease-in-out;
+
+        &--selected {
+            width: 70%;
+        }
+
+        &--hidden {
+            width: 0%;
+            padding: 0;
+            margin: 5px 0;
+            border-radius: 8px;
+            @include font($bold, 16px, var(--primary-color));
+            background-color: rgba(243, 22, 22, 0.87);
+            text-align: left;
+            transition: 0.3s ease-in-out;
+        }
+
+        &--hidden--selected {
+            width: 30%;
+            padding: 0 12px;
+            margin-left: 8px;
+        }
+
+        &::after {
+            content: url(../../assets/img/arrow.svg);
+            width: 16px;
+            position: absolute;
+            right: 0;
+            margin-right: 8px;
+        }
+    }
+}

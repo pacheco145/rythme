@@ -1,0 +1,33 @@
+@import '../../styles/styles.scss';
+
+
+
+
+.header {
+    background-color: var(--secondary-color);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: $headNavHeight;
+    z-index: 1;
+    
+    &__heading {
+        @include font($regular, 20px, black);
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    &__back {
+        position: absolute;
+        left: 0;
+        margin: 10px;
+    }
+    
+    img {
+        width: 30px;
+        height: 30px;
+    }
+    
+}

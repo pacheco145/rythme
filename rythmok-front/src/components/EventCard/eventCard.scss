@@ -1,0 +1,100 @@
+@import '../../styles/styles.scss';
+
+.event-card {
+    display: flex;
+    @include font($semi, 12px, white);
+    height: 130px;
+    margin-bottom: 16px;
+    padding: 0 12px;
+
+    &__image {
+        flex-basis: 30%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__info {
+        flex-basis: 70%;
+        display: grid;
+        padding: 5px;
+        padding-left: 13px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 2fr 4fr 1fr;
+    }
+    &__date-hall {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        margin-top: 3px
+    }
+
+    &__date {
+        @include font($semi, 11px, rgba(255, 255, 255, 0.9));
+    }
+
+    &__hall {
+        display: block;
+        @include font($regular, 11px, rgba(255, 255, 255, 0.9));
+    }
+
+    &__artist {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        @include font($semi, 15px, var(--secondary-color));
+        padding-top: 5px;
+    }
+
+    &__last-row {
+        grid-column: 1/4;
+        grid-row: 3/4;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__styles {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        @include font($regular, 11px, rgba(255, 255, 255, 0.9));
+    }
+    &__attendees {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        text-align: center;
+        @include font($regular, 11px, rgba(255, 255, 255, 0.9));
+    }
+    &__price {
+        grid-column: 3/4;
+        grid-row: 3/4;
+        text-align: right;
+        @include font($regular, 11px, rgba(255, 255, 255, 0.9));
+    }
+
+    &__buttons {
+        grid-column: 3/4;
+        grid-row: 1/3;
+        display: flex;
+        flex-direction: column;
+        // justify-content: flex-end;
+        align-items: flex-end;
+    }
+    &__fav {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        img {
+            width: 30px;
+        }
+    }
+    &__buy {
+        grid-column: 3/4;
+        grid-row: 2/3;
+        
+        // padding: 5px;
+        width: 80px;
+        height: 25px;
+        border-radius: 15px;
+        border: var(--secondary-color) 1px solid;
+        color: var(--secondary-color);
+    }
+}
+

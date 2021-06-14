@@ -1,0 +1,25 @@
+@import '../../styles/styles.scss';
+
+.filters {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+    input {
+        background-color: var(--button-color-1);
+        border-radius: 12px;
+        padding-left: 8px;
+        color: white;
+        min-height: 30px;
+    }
+    ::placeholder {
+        text-align: center;
+        color:hsl(0, 0%, 80%);
+    }
+}
+
+.events {
+    width: 100%;
+}
